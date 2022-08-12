@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'pickup-call',
     loadChildren: () => import('./pages/pickup-call/pickup-call.module').then( m => m.PickupCallPageModule)
   },
+  {
+    path: 'pickup-calls',
+    loadChildren: () => import('./pages/pickup-calls/pickup-calls.module').then( m => m.PickupCallsPageModule)
+  },
 ];
 
 @NgModule({
