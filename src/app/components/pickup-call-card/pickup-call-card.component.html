@@ -1,7 +1,6 @@
 <ion-card>
-  <ion-card-header *ngIf="hasHeader">
-    <ion-card-subtitle>Last pickup call</ion-card-subtitle>
-  </ion-card-header>
+  <ng-content select="[header]"></ng-content>
+
   <ion-card-content>
     <ion-item lines="none">
       <ion-icon *ngIf="status === 'hold'" name="hourglass-outline" slot="start" color="warning"></ion-icon>
@@ -26,8 +25,7 @@
       <ion-label color="success">{{value}}</ion-label>
     </ion-item>
 
-    <ion-button color="success" fill="clear" size="full" *ngIf="hasFooter">
-      See all..
-    </ion-button>
+    <ng-content select="[footer]"></ng-content>
+
   </ion-card-content>
 </ion-card>
